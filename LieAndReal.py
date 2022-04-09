@@ -1,5 +1,4 @@
 import pandas as pd
-from sklearn.metrics import confusion_matrix
 
 df = pd.read_csv('SentimentalLIAR-master/train_final.csv', encoding='utf-8')
 
@@ -85,7 +84,7 @@ for i in df_label_test:
 
 
 for i in range(len(df_text)):
-    # wordArrayText = preproccess(sentence)
+    # wordArrayText = preproccess(df_text[i])
     wordArrayText = df_text[i]
     if df_sentiment[i] == "NEGATIVE":
         wordArrayText += " $NEG"
@@ -96,7 +95,7 @@ for i in range(len(df_text)):
 lieDetectionTest = []
 
 for i in range(len(df_text_test)):
-    # wordArrayText = preproccess(sentence)
+    # wordArrayText = preproccess(df_text_test[i])
     wordArrayText = df_text_test[i]
     if df_sentiment_test[i] == "NEGATIVE":
         wordArrayText += " $NEG"

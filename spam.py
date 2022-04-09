@@ -69,5 +69,3 @@ predict = naiveBayes.predict(xTestTfidf)
 conf = metrics.confusion_matrix(df_label_result[int(0.8 *len(df_text)):], predict)
 print(predict)
 print(conf)
-
-
