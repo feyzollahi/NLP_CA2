@@ -42,12 +42,14 @@ for i in df_label:
     else:
         df_label_result.append(0)
 for sentence in df_text[0:int(0.8 *len(df_text))]:
-    wordArrayText = preproccess(sentence)
+    # wordArrayText = preproccess(sentence)
+    wordArrayText = sentence
     spamDetectionData.append(wordArrayText)
 # naiveBayes.fit(spamDetectionData, df_label_result[0:int(0.8 *len(df_text))])
 spamDetectionTest = []
 for sentence in df_text[int(0.8 *len(df_text)):]:
-    wordArrayText = preproccess(sentence)
+    # wordArrayText = preproccess(sentence)
+    wordArrayText = sentence
     spamDetectionTest.append(wordArrayText)
 
 # a = naiveBayes.predict(spamDetectionTest)

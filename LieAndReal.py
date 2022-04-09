@@ -84,8 +84,8 @@ for i in df_label_test:
 
 
 for i in range(len(df_text)):
-    # wordArrayText = preproccess(df_text[i])
-    wordArrayText = df_text[i]
+    wordArrayText = preproccess(df_text[i])
+    # wordArrayText = df_text[i]
     if df_sentiment[i] == "NEGATIVE":
         wordArrayText += " $NEG"
     elif df_sentiment[i] == "POSITIVE":
@@ -95,8 +95,8 @@ for i in range(len(df_text)):
 lieDetectionTest = []
 
 for i in range(len(df_text_test)):
-    # wordArrayText = preproccess(df_text_test[i])
-    wordArrayText = df_text_test[i]
+    wordArrayText = preproccess(df_text_test[i])
+    # wordArrayText = df_text_test[i]
     if df_sentiment_test[i] == "NEGATIVE":
         wordArrayText += " $NEG"
     elif df_sentiment_test[i] == "POSITIVE":
